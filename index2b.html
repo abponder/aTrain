@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Employee History</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+                crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+
+<!--Link to custom stylesheet
+        <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script> 
+</head>
+
+<body>
+        <header class="container-fluid col-xs-12 col-sm-12 col-md-12 jumbotron">
+                <h1 class="title">Employee History</h1>
+        </header>
+
+        <div class="container">
+                <div class="row col-md-12">
+                        <table class="table">
+                                <thead>
+                                        <tr>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Role</th>
+                                                <th scope="col">Start Date</th>
+                                                <th scope="col">Months Worked</th>
+                                                <th scope="col">Monthly rate</th>
+                                                <th scope="col">Total Billed</th>
+                                        </tr>
+                                </thead>
+                                <tbody id="employeeTable">
+                                               
+                                </tbody>
+                        </table>
+
+                </div>
+                <div class="row" id="list">
+                    <div class="col-md-12">
+                        <form style=" padding: 20px; margin: 0 auto;" class="bg-info">
+                            <div class="form-group">
+                                    <label for="exampleInputEmail1">Name</label>
+                                    <input type="Name" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="name">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleInputPassword1">Role</label>
+                                    <input type="role" class="form-control" id="roleInput" placeholder="Role">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleInputPassword1">Start Date</label>
+                                    <input type="date" class="form-control" id="startDateInput" placeholder="01/01/2018">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleInputPassword1">Monthly Rate</label>
+                                    <input type="money" class="form-control" id="monthlyRateInput" placeholder="xxxx.xx">
+                            </div>
+                            <button type="submit"  class="submitButton btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>

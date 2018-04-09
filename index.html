@@ -1,0 +1,119 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>It's Train Time</title>
+
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script> 
+        <!-- Added Moment JS -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+<!--Link to custom stylesheet 
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+-->
+        <link rel="icon" type="image/gif" href="assets/images/img_train1.png" />
+
+</head>
+
+<body onload="startTime()">
+
+    <div class="container-fluid bg-info bg-dark text-white sticky-top "><!-- clockdate-wrapper -->
+        <div class="row">
+            <div class="col-md-12" id="clockdate">
+                <div class="col-md-12" id="clock">clock</div>
+                <div class="col-md-12" id="date">date</div>
+            </div>
+        </div>
+    </div>
+    
+
+        <header class="container-fluid jumbotron border border-primary mt-2 pt-0 pb-2">
+                
+                
+            <div class ="row mx-auto  justify-content-center">
+                    <h1 class="title">It's Train Time</h1>                    
+            </div>
+                
+            <div class ="row mx-auto justify-content-center">
+                    <div >
+                    <img class=" img-thumbnail" src="assets/images/img_train4.jpg" alt="Train 4" width="30%"> 
+                    <img class=" img-thumbnail " src="assets/images/img_train3.jpg" alt="Train 3" width="30%"> 
+                    <img class=" img-thumbnail " src="assets/images/img_train2.jpg" alt="Train 2" width="37%">  
+                    </div>
+            </div>
+        </header>
+        
+        <div class="container"><div class="col-md-12 bg-primary text-white btn-primary">Current Train Schedule</div>
+                <div class="row col-md-12  " >
+                        <table class="table border border-primary">
+                                <thead>
+                                        <tr>
+                                                <th scope="col">Train Name</th>
+                                                <th scope="col">Destination</th>
+                                                <th scope="col">1st Trn Time</th>
+                                                <th scope="col">Frequency (min)</th>
+                                                <th scope="col">Next Arrival</th>
+                                                <th scope="col">Minutes Away</th>
+                                                <!-- <th scope="col">Total Billed</th> -->
+                                        </tr>
+                                </thead>
+                                <!-- <tbody id="employeeTable"> -->
+                                <tbody id="trainTable">
+                                               
+                                </tbody>
+                        </table>
+
+                </div>
+                <div class="row" id="list">
+                    <div class="col-md-12">
+                        <form style=" padding: 20px; margin: 0 auto;" class="bg-info">
+                            <div class="form-group">
+                                    <label for="exampleTrain">Train Name</label>
+                                    <input type="text" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="enter train name">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleTrain">Destination</label>
+                                    <input type="text" class="form-control" id="destinationInput" placeholder="enter the destination">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleTrain">First Train Time</label>
+                                    <input type="time" class="form-control" id="firsttraintimeInput" placeholder="First train time hr:min 00:00">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleTrain">Frequency</label>
+                                    <input type="text" class="form-control" id="frequencyInput" placeholder="in minutes">
+                            </div>
+                            <button type="submit"  class="submitButton btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+
+
+        <hr>
+        <footer class="bg-dark text-white text-center">
+                <div class="container">
+                    <span>Copyright &copy;</span>
+                </div>
+                <br>
+            </footer>
+
+    <script src="assets/javascript/script.js"></script>
+</body>
+
+</html>
